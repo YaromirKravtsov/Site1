@@ -40,3 +40,13 @@ if(iconMenu){
 	});
 
 }
+
+
+/* ------- */
+const animatonTwist = document.getElementById("animatonTwist");
+let deg = 0;
+setInterval(() => {
+	deg++;
+	console.log(deg);
+	animatonTwist.style.transform = `rotate(${deg}deg)`
+}, 10);
