@@ -286,6 +286,15 @@ height: 5px;
 body._lock{
 	overflow: hidden;
 }
+@media (max-width:856px){
+    .header__menu {
+        margin: 0 12px;
+      }
+      .row3_text {
+        margin-left: 8px;
+        margin-right: 5px;
+      }
+}
 
 @media (max-width:800px){
     
@@ -573,6 +582,7 @@ height: 24px;
 .content2__select{
     display: flex;
     flex-direction: row;
+    margin-left: 20px;
 }
 .content2__select-column1 {
     display: flex;
@@ -794,7 +804,7 @@ text-align: center;
     flex-direction: row;
     align-items: center;
     margin-top: 90px;
-
+/*     margin-left: -20px; */
   
 }
 .content3__strelka1 {
@@ -831,6 +841,7 @@ text-align: center;
    display: flex;
    flex-direction: row;
    margin-top: 140px;
+   margin-left: 10px;
 }
 .content3__circles-circle1 {
     position: relative;
@@ -1051,6 +1062,7 @@ align-items: center;
    /*  width: 250px; */
     margin-top: 75px;
     margin-bottom: 100px;
+    padding-bottom: 70px;
 }
 .content4__main-row1 {
     display: flex;
@@ -1569,6 +1581,12 @@ margin-left: 5px;
 }
 /* --------------------------------------------------------------------Адаптив------------------------------------------------------------------- */
 @media (max-width: 1050px) {
+    .content3__circles {
+        margin-left: 0px;
+      }
+    .content2__select{
+        margin-left: 0px;
+    }
     .neck__kvb {
         width: 25px;
         height: 19px;
@@ -1695,6 +1713,9 @@ margin-left: 5px;
             line-height: 25px;
             font-weight: 400;
             color: #000;
+          }
+          .content3__up {
+            margin-left: 0px;/* -------------------------- */
           }
 }
 /* ------------------------------------------------- */
