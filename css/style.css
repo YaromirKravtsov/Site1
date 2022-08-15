@@ -1814,15 +1814,15 @@ margin-left: 5px;
 }
 @media (max-width: 705px) {
     .sqear{
-        top: 620px;
-        left: 46.7%;
+        top: 580px;
+        left: 43.7%;
     
     }
     
     .seqar-cont{
 
-        top: 652px;
-        left: 47%;
+        top: 612px;
+        left: 44%;
     }
 
     .content1__wraper {
@@ -1852,7 +1852,7 @@ margin-left: 5px;
       }
 
       .content1__bacground {
-        height: 590px;
+        height: 550px;
       }
 
       .content3__down-left-img {
@@ -2005,6 +2005,16 @@ margin-left: 5px;
     
         margin-bottom: 400px;
     }      
+}
+@media (max-width: 500px) {
+
+    .sqear{
+        left: 40.7%;
+    }
+    
+    .seqar-cont{
+        left: 42%;
+    }
 }
 @media (max-width: 433px){
     .content4__line-line {
