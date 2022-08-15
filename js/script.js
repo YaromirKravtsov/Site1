@@ -34,7 +34,7 @@ if(iconMenu){
 	
 	iconMenu.addEventListener("click", function(e){
 		document.body.classList.toggle('_lock')
-		iconMenu.classList.toggle('_active');
+		iconMenu.classList.toggle('_active'); 
 		menuBody.classList.toggle('_active');
 
 	});
@@ -239,4 +239,3 @@ tupUp3.addEventListener("click", function(){
 		let betString3Local = localStorage.getItem('betString3');
 		document.getElementById('RaiseTheBet3').innerHTML = `${betString3Local.substr(0, 2)} ${betString3Local.substr(2, 3)} `;
 });
-
