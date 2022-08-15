@@ -58,7 +58,7 @@ new Swiper('.image-slider',{
 });
 /* --------------Countdown-------------- */
 let sec = 60;
-let min = 60;
+let min = 59;
 let hour = 24;
 let day = 4;
 
@@ -122,11 +122,16 @@ tupUp2.addEventListener("click", function(){
 });
 
 
-let velueUp3= Number(localStorage.getItem('velueUpFirst3'));
+
+let velueUp3 = Number(localStorage.getItem('velueUpFirst3'));
+if(velueUp3 == 0)
+{
+	velueUp3 =1700;
+}
 document.getElementById('upVal3').innerHTML = `${String(velueUp3).substr(0, 1)} ${String(velueUp3).substr(1, 3)} `;
 let velueUpFirst3;
 
-let bet3 =60460;
+let bet3 = 60460;
 let betString3;
 
 const tupUp3 = document.getElementById("up3");
