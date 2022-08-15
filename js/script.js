@@ -57,16 +57,35 @@ new Swiper('.image-slider',{
     },
 });
 /* --------------Countdown-------------- */
-let sec = 60;
+let sec = Number(localStorage.getItem('velueSec'));
+if(sec==0){
+	sec =59;
+}
+let velueSec;
 
-let min = 59;
-let hour = 24;
-let day = 4;
+
+let min = Number(localStorage.getItem('velueMin'));
+if(min==0){
+	min =59;
+}
+let velueMin;
+
+let hour = Number(localStorage.getItem('velueHour'));
+if(hour == 0){
+	hour =23;
+}
+let velueHour;
+
+let day = Number(localStorage.getItem('velueDay'));
+if(day == 0){
+	day = 4;
+}
+let velueDay;
 
 setInterval(() => {
    sec--;
 if(sec== 0){
-    sec =60;
+    sec =59;
     min--;
 }
 if(min== 0){
@@ -74,7 +93,7 @@ if(min== 0){
     hour--;
 }
 if(hour== 0){
-    hour =24;
+    hour =23;
     day--;
 }
 if(day== 0){
@@ -86,10 +105,25 @@ if(day== 0){
 
 
 setInterval(() => {
-    document.getElementById('counter3').innerHTML = `${day}:${hour}:${min}:${sec}`;
-	document.getElementById('counter2').innerHTML = `${day}:${hour}:${min}:${sec}`;
-	document.getElementById('counter1').innerHTML = `${day}:${hour}:${min}:${sec}`;
-
+	velueSec = String(sec);
+	localStorage.setItem('velueSec', velueSec);
+	let velueSecLocal = localStorage.getItem('velueSec');
+	/* --- */
+	velueMin = String(min);
+	localStorage.setItem('velueMin', velueMin);
+	let velueMinLocal = localStorage.getItem('velueMin');
+	/* --- */
+	velueHour = String(hour);
+	localStorage.setItem('velueHour', velueHour);
+	let velueHourLocal = localStorage.getItem('velueHour');
+	/* --- */
+	
+	velueDay = String(day);
+	localStorage.setItem('velueDay', velueDay);
+	let velueDayrLocal = localStorage.getItem('velueDay');
+	document.getElementById('counter3').innerHTML = `${velueDayrLocal}:${velueHourLocal}:${velueMinLocal}:${velueSecLocal}`;
+	document.getElementById('counter2').innerHTML = `${velueDayrLocal}:${velueHourLocal}:${velueMinLocal}:${velueSecLocal}`;
+	document.getElementById('counter1').innerHTML = `${velueDayrLocal}:${velueHourLocal}:${velueMinLocal}:${velueSecLocal}`;
 });
 /* ------ Tup to up ------ */
 
@@ -205,3 +239,4 @@ tupUp3.addEventListener("click", function(){
 		let betString3Local = localStorage.getItem('betString3');
 		document.getElementById('RaiseTheBet3').innerHTML = `${betString3Local.substr(0, 2)} ${betString3Local.substr(2, 3)} `;
 });
+
